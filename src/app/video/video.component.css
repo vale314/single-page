@@ -1,0 +1,58 @@
+
+
+
+
+.slider{
+    
+    height: 100vh;
+    background-size: cover;
+    background-position: center; 
+}
+
+
+.vid {
+	width: 100%;
+	height: 100vh;
+}
+/* auto change 100%*/
+.vid video {
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        transform: translateX(-50%) translateY(-50%);
+    
+      background-size: cover;
+      transition: 1s opacity;
+    
+}
+
+@media screen and (max-device-width: 800px) {
+    .slider { 
+        background: url(https://scontent.fgdl5-1.fna.fbcdn.net/v/t1.0-9/25552067_552126321790932_1620459106336366433_n.jpg?oh=97214c3f3c4bdf35e8a738c1c3eec8c1&oe=5B1450F5);
+        height: 100vh;
+        background-size: cover;
+        background-position: center; }
+    .vid video{
+        display: inline;
+
+        position: static;
+        top: auto;
+        left: auto;
+        min-width: 0px;
+        min-height: 0px;
+
+    
+      background-size: auto;
+      transition: 0s opacity;
+    }
+    .video{
+        display: none;
+    }
+}
