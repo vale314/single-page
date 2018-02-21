@@ -6,20 +6,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  
-  muted=false
+
+  muted=true
 
   title = 'app';
 
+
+
+ 
   ngOnInit() {
     
-    // window.addEventListener('scroll', this.scroll, true);
+    //  window.addEventListener('scroll', this.scroll, true);
+     
+     window.scrollTo(0,1);
+     
+      
+ 
   }
+
+
+
   // scroll = (): void => {
   //   var y:number = window.scrollY
-   
+  //   console.log(y);
   // };
+
   clickToMuted(){
+    console.log("hello");
     this.muted= !this.muted
   }
+
+
+
+
+  
 }

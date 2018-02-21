@@ -17,7 +17,7 @@
 			<section class="hero " id="hero">
 				<app-video [muted]="muted"></app-video>
 			<div class="text">
-				<p class="lead">Fully responsive HTML5 &amp; CSS3 template</p>
+				<p class="lead ">Fully responsive HTML5 &amp; CSS3 template</p>
 				<h1>I'm <span class="bold">stisla</span>, based on <span class="bold">Bootstrap 4</span>.</h1>
 				<div class="cta">
 					<a href="#features" class="btn btn-primary smooth-link" >Get Started</a>
@@ -86,20 +86,21 @@
 
 				</div>
 
-				<h2 class="section-title">We Blog Sometimes</h2>
+				<h2 class="section-title" >We Blog Sometimes</h2>
 				<p class="section-lead text-muted">We wrote some articles about whatever was on our heads and most people liked it.</p>
 				<div class="section-body">
 					<div class="row col-spacing">
 						<div class="col-12 col-md-6 col-lg-4">
 							<article class="card" >
-								<div (click)="clickToMuted()">
-									<iframe  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/Pm8wHBTfgVA" frameborder="0" allow="autoplay; encrypted-media"></iframe>							  <div class="card-body">
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/Pm8wHBTfgVA" frameborder="0" allow="autoplay; encrypted-media"></iframe>
 								</div>
-								  <div class="card-subtitle mb-2 text-muted">by <a href="#">John Doe</a> on August 10, 2017</div>
-							    <h4 class="card-title"><a href="#" data-toggle="read" data-id="1">Duis aute irure dolor in reprehenderit in voluptate</a></h4>
-							    <p class="card-text">Mauris eu eros in metus elementum porta eget sed ligula. Praesent consequat, ipsum molestie pellentesque venenatis.</p>
-							    <div class="text-right">						    	
-								    <a href="#" class="card-more" data-toggle="read" data-id="1">Read More <i class="ion-ios-arrow-right"></i></a>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="#">John Doe</a> on August 10, 2017</div>
+									<h4 class="card-title"><a href="#" data-toggle="read" data-id="1">Duis aute irure dolor in reprehenderit in voluptate</a></h4>
+									<p class="card-text" >Mauris eu eros in metus elementum porta eget sed ligula. Praesent consequat, ipsum molestie pellentesque venenatis.</p>
+									<div class="text-right" >						    	
+										<a href="#" class="card-more" data-toggle="read" data-id="1">Read More <i class="ion-ios-arrow-right"></i></a>
 							    </div>
 						    </div>
 						  </article>
