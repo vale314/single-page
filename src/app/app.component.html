@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="author" content="Kodinger">
+		<meta name="author" content="Valentin Alejandro Ruiz Ortiz">
 		<meta name="keyword" content="Kodinger, template, html5, css3, bootstrap4">
-		<meta name="description" content="HTML5 and CSS3 Template Based on Bootstrap 4">
-		<title>I'm Stisla</title>
+		<meta name="description" content="Mariachi de Jalisco Guadalajara Los nungaray">
+		<title>Mariachi Los Nungaray</title>
 		
 	</head>
 
@@ -17,61 +17,56 @@
 			<section class="hero " id="hero">
 				<app-video [muted]="muted"></app-video>
 			<div class="text">
-				<p class="lead ">Fully responsive HTML5 &amp; CSS3 template</p>
-				<h1>I'm <span class="bold">stisla</span>, based on <span class="bold">Bootstrap 4</span>.</h1>
+				<p class="lead d-none d-sm-none d-md-block "><span class="bold">De Los Mejores Mariachis De JALISCO</span></p>
+				<h1><span class="bold">{{name}}</span></h1>
 				<div class="cta">
-					<a href="#features" class="btn btn-primary smooth-link" >Get Started</a>
-					<div class="link">						
-						<a href="#">Under the MIT License</a>
-					</div>
+					<a href="#contact" class="d-none d-sm-none d-md-inline btn btn-primary smooth-link" >Contactanos</a>
+					<a href="tel:3320768955" id="contacto" class="d-inline d-sm-inline d-md-none btn btn-primary" >Contactanos</a>
 				</div>
+				<div class="cta ">
+						<a href="#blog"  class="d-none d-sm-none d-md-inline btn-primary smooth-link btn btn-warning">Conocenos</a>
+					</div>
 			</div>
 		</section>
 		<section class="padding" id="features">
-			<div class="container">
+			<div class="container mt-3">
 				<div class="row">
 					<div class="col-12 col-md-4 col-sm-12">
 						<div class="list-item">
 							<div class="icon">
-								<i class="ion-code"></i>
+								<i class="ion-mic-c"></i>
 							</div>
 							<div class="desc">
-								<h2>Based on Bootstrap 4</h2>
+								<h2>Conformada La Agrupacion</h2>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore.
-								</p>
-								<a href="#" class="more">Learn More</a>
+										La agrupación puede estar conformada por un arpa,  vihuela,   guitarra,  guitarrón, trompetas y violines.
+								</p>							
 							</div>
 						</div>
 					</div>
 					<div class="col-12 col-md-4 col-sm-12">
 						<div class="list-item">
 							<div class="icon">
-								<i class="ion-social-github"></i>
+								<i class="ion-speakerphone"></i>
 							</div>
 							<div class="desc">
-								<h2>Open Source</h2>
+								<h2>Mariachi Por Excelencia</h2>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore.
+									Mariachi Los Nungaray uno de los mariachis mas calificados y reconocidos en guadalajara
 								</p>
-								<a href="#" class="more">Learn More</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-12 col-md-4 col-sm-12">
 						<div class="list-item no-spacing">
 							<div class="icon">
-								<i class="ion-paintbrush"></i>
+									<i class="ion-pricetags"></i>
 							</div>
 							<div class="desc">
-								<h2>Customizable</h2>
+								<h2>Adaptable</h2>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore.
+									Mariachi listo para cualquier evento que tengas desde serenatas hasta fiesta o eventos adaptable para lo que nesesites
 								</p>
-								<a href="#" class="more">Learn More</a>
 							</div>
 						</div>
 					</div>
@@ -86,91 +81,105 @@
 
 				</div>
 
-				<h2 class="section-title" >We Blog Sometimes</h2>
-				<p class="section-lead text-muted">We wrote some articles about whatever was on our heads and most people liked it.</p>
+				<h2 class="section-title" >Te invitamos a escucharnos</h2>
+				<p class="section-lead text-muted d-none d-sm-none d-md-block">Disfruta al cantar y escuchar tus canciones favoritas de artistas tan queridos como lo son Juan Gabriel, Vicente Fernández, Alejandro Fernández, Joan Sebastian solo por mencionar algunos, acompaña con música esos momentos tan especiales </p>
+				<p class="section-lead text-muted d-block d-sm-block d-md-none">Escucha tus canciones favoritas  Juan Gabriel, Vicente Fernández, Alejandro Fernández, Joan Sebastian solo por mencionar algunos. </p>
 				<div class="section-body">
 					<div class="row col-spacing">
 						<div class="col-12 col-md-6 col-lg-4">
 							<article class="card" >
 								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/eD_MTo7PjV8" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En Diciembre 30, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=eD_MTo7PjV8"  data-id="1" target="_blank">17 Años - Angeles Azules</a></h4>
+									<p class="card-text" >Una de las canciones mas famosas del gran grupo Los Angeles Azules Interpretada por el Mariachi Los Nungaray</p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="1" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
+							    </div>
+						    </div>
+						  </article>
+					  </div>
+					  <div class="col-12 col-md-6 col-lg-4">
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/HK6tbkZ9AjA" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En Enero 12, 2018</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=HK6tbkZ9AjA"  data-id="1" target="_blank">Adios Amor - Christian Nodal</a></h4>
+									<p class="card-text" >Una Cancion que rompe las fronteras en el mundo Interpretada por el Mariachi Los Nungaray</p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="2" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
+							    </div>
+						    </div>
+						  </article>
+					  </div>
+					  <div class="col-12 col-md-6 col-lg-4">
+							<article class="card" >
+								<div class="youtube">
 									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/Pm8wHBTfgVA" frameborder="0" allow="autoplay; encrypted-media"></iframe>
 								</div>
 								<div class="card-body">
-									<div class="card-subtitle mb-2 text-muted">by <a href="#">John Doe</a> on August 10, 2017</div>
-									<h4 class="card-title"><a href="#" data-toggle="read" data-id="1">Duis aute irure dolor in reprehenderit in voluptate</a></h4>
-									<p class="card-text" >Mauris eu eros in metus elementum porta eget sed ligula. Praesent consequat, ipsum molestie pellentesque venenatis.</p>
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En diciembre 22, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=Pm8wHBTfgVA"  data-id="1" target="_blank">Se Va Muriendo Mi Alma - Marco Solis</a></h4>
+									<p class="card-text" >“Se va muriendo mi alma” es un clásico de la música mexicana, es una cancion que la hemos escuchado en miles de versiones</p>
 									<div class="text-right" >						    	
-										<a href="#" class="card-more" data-toggle="read" data-id="1">Read More <i class="ion-ios-arrow-right"></i></a>
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="3" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
 							    </div>
 						    </div>
 						  </article>
 					  </div>
 					  <div class="col-12 col-md-6 col-lg-4">
-							<article class="card">
-							  <img class="card-img-top" src="assets/img/news/img04.jpg" alt="Article Image">
-							  <div class="card-body">
-								  <div class="card-subtitle mb-2 text-muted">by <a href="#">John Doe</a> on August 10, 2017</div>
-							    <h4 class="card-title"><a href="#" data-toggle="read" data-id="1">Velit esse cillum dolore eu blos siur dropsida wedor</a></h4>
-							    <p class="card-text">Mauris eu eros in metus elementum porta eget sed ligula. Praesent consequat, ipsum molestie pellentesque venenatis.</p>
-							    <div class="text-right">						    	
-								    <a href="#" class="card-more" data-toggle="read" data-id="1">Read More <i class="ion-ios-arrow-right"></i></a>
-							    </div>
-						    </div>
-						  </article>
-						</div>
-						<div class="col-12 col-md-6 col-lg-4">
-							<article class="card">
-							  <img class="card-img-top" src="assets/img/news/img02.jpg" alt="Article Image">
-							  <div class="card-body">
-								  <div class="card-subtitle mb-2 text-muted">by <a href="#">John Doe</a> on August 10, 2017</div>
-							    <h4 class="card-title"><a href="#" data-toggle="read" data-id="1">Excepteur sint as occaecat dros cupidatat non proident los</a></h4>
-							    <p class="card-text">Mauris eu eros in metus elementum porta eget sed ligula. Praesent consequat, ipsum molestie pellentesque venenatis.</p>
-							    <div class="text-right">						    	
-								    <a href="#" class="card-more" data-toggle="read" data-id="1">Read More <i class="ion-ios-arrow-right"></i></a>
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/wRS7D_YkLUg" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En diciembre 2, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=wRS7D_YkLUg"  data-id="1" target="_blank">María Chuchena/La bruja</a></h4>
+									<p class="card-text" >“Se va muriendo mi alma” es un clásico de la música mexicana, es una cancion que la hemos escuchado en miles de versiones</p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="4" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
 							    </div>
 						    </div>
 						  </article>
 					  </div>
 					  <div class="col-12 col-md-6 col-lg-4">
-							<article class="card">
-							  <img class="card-img-top" src="assets/img/news/img05.jpg" alt="Article Image">
-							  <div class="card-body">
-								  <div class="card-subtitle mb-2 text-muted">by <a href="#">John Doe</a> on August 10, 2017</div>
-							    <h4 class="card-title"><a href="#" data-toggle="read" data-id="1">Sunt in ado culpa qui officia deserunt mollit anim id</a></h4>
-							    <p class="card-text">Mauris eu eros in metus elementum porta eget sed ligula. Praesent consequat, ipsum molestie pellentesque venenatis.</p>
-							    <div class="text-right">						    	
-								    <a href="#" class="card-more" data-toggle="read" data-id="1">Read More <i class="ion-ios-arrow-right"></i></a>
-							    </div>
-						    </div>
-						  </article>
-						</div>
-						<div class="col-12 col-md-6 col-lg-4">
-							<article class="card">
-							  <img class="card-img-top" src="assets/img/news/img03.jpg" alt="Article Image">
-							  <div class="card-body">
-								  <div class="card-subtitle mb-2 text-muted">by <a href="#">John Doe</a> on August 10, 2017</div>
-							    <h4 class="card-title"><a href="#" data-toggle="read" data-id="1">Incididunt ut labore et labore dolore magna aliqua lorem</a></h4>
-							    <p class="card-text">Mauris eu eros in metus elementum porta eget sed ligula. Praesent consequat, ipsum molestie pellentesque venenatis.</p>
-							    <div class="text-right">						    	
-								    <a href="#" class="card-more" data-toggle="read" data-id="1">Read More <i class="ion-ios-arrow-right"></i></a>
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/CJlgb3eqxG4" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En diciembre 21, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=CJlgb3eqxG4"  data-id="1" target="_blank">La Bikina</a></h4>
+									<p class="card-text" >La Bikina es una famosa canción mexicana compuesta por Rubén Fuentes, en el año de 1964. </p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="5" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
 							    </div>
 						    </div>
 						  </article>
 					  </div>
 					  <div class="col-12 col-md-6 col-lg-4">
-							<article class="card">
-							  <img class="card-img-top" src="assets/img/news/img06.jpg" alt="Article Image">
-							  <div class="card-body">
-								  <div class="card-subtitle mb-2 text-muted">by <a href="#">John Doe</a> on August 10, 2017</div>
-							    <h4 class="card-title"><a href="#" data-toggle="read" data-id="1">Ut enim ad minim veniam quis nostrud enim ad kruv</a></h4>
-							    <p class="card-text">Mauris eu eros in metus elementum porta eget sed ligula. Praesent consequat, ipsum molestie pellentesque venenatis.</p>
-							    <div class="text-right">						    	
-								    <a href="#" class="card-more" data-toggle="read" data-id="1">Read More <i class="ion-ios-arrow-right"></i></a>
-							    </div>
-						    </div>
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/Lz9zKcPYQLk" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En diciembre 21, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=Lz9zKcPYQLk"  data-id="1" target="_blank">Y Fue Así - Julión Álvarez</a></h4>
+									<p class="card-text" >"Y Fue Asi" una de las mas grandes canciones reconocidas a nivel mundial por el gran Julion Alvarez Interpretada por Mariachi Los Nungaray </p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="6" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
+							    	</div>
+						    	</div>
 						  </article>
-						</div>
+					  </div>
 					</div>
+
+					
+
 				</div>
 
 				<div class="row align-items-center mt-5">

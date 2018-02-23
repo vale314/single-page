@@ -7,12 +7,13 @@ import { Component, OnInit, EventEmitter,Input } from '@angular/core';
 })
 export class VideoComponent implements OnInit {
   @Input() muted:boolean;
-
-
-  constructor() { }
+  
+  constructor() {
+   
+   }
 
   ngOnInit() {
-
   }
+
 
 }
