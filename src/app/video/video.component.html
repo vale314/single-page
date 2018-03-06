@@ -1,6 +1,10 @@
 
-    <div class="vid d-flex slider container-fluid justify-content-center align-items-center ">
+    <div *ngIf="!mobile" class="vid d-flex  container-fluid justify-content-center align-items-center ">
         <video #video [muted]="muted"  play inline autoplay  loop id="bgvid" class="d-none d-sm-none d-md-block  ">
           <source src="../../assets/rafa.mp4" type="video/mp4">
           </video>
+    </div>
+
+    <div *ngIf="mobile" class="vid d-flex slider container-fluid justify-content-center align-items-center ">
+
     </div>

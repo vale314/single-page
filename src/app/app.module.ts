@@ -8,7 +8,7 @@ import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { VideoComponent } from './video/video.component';
 import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
-
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
   imports: [
     BrowserModule,
     CollapseModule.forRoot(),
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
