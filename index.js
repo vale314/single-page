@@ -23,6 +23,6 @@ router.get('*',(req,res)=>{
 app.use(express.static('./dist'));
 app.use('/',router);
 
-app.listen(3001,'192.168.1.76',()=>{
+app.listen(process.env.PORT || 3000 ,()=>{
     console.log("Server Is Running");
 })
