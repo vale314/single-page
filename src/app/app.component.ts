@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  muted=true
+  muted=false
   name:string = '' 
 
   title = 'app';
@@ -35,7 +34,6 @@ export class AppComponent implements OnInit {
   // };
 
   clickToMuted(){
-    console.log("hello");
     this.muted= !this.muted
   }
 
