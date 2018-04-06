@@ -37,6 +37,6 @@ router.get('*',(req,res)=>{
 app.use(express.static('./dist'));
 app.use('/',router);
 
-app.listen(3000,'192.168.1.76' ,()=>{
+app.listen(3001,'192.168.1.76' ,()=>{
     console.log("Server Is Running");
 })
