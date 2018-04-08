@@ -29,7 +29,28 @@
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
 		    "../src/assets/js/jquery.easeScroll.js",
-		    "../src/assets/js/stisla.js"
+        "../src/assets/js/stisla.js",
+        "../src/assets/js/bars.js",
+        "../src/assets/js/bootstrap.js",
+        "../src/assets/js/counterup.min.js",
+        "../src/assets/js/easing.js",
+        "../src/assets/js/jquery-2.1.4.min.js",
+        "../src/assets/js/jquery.easeScroll.js",
+        "../src/assets/js/jquery.flexslider.js",
+        "../src/assets/js/move-top.js",
+        "../src/assets/js/responsiveslides.min.js",
+        "../src/assets/js/scrolling-nav.js",
+        "../src/assets/js/simpleLightbox.js",
+        "../src/assets/js/waypoints.min.js"
+        
+        
+        
+        
+        
+        
+
+
+
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

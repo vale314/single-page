@@ -57,12 +57,13 @@ export class BodyFotosComponent implements OnInit {
   ]
 
   myVar:boolean = true
-  constructor() { }
+  constructor() { 
+    window.scrollTo(0, 0);
+  }
 
   
    scroll = (): void => {
      var y:number = window.scrollY
-     console.log(y)
      if(y >200)
       this.myVar=false
      if(200>y)
@@ -75,6 +76,7 @@ export class BodyFotosComponent implements OnInit {
   }
 
   ngOnInit() {
+           
           window.addEventListener('scroll', this.scroll, true);
           
   }

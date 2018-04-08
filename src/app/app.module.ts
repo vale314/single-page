@@ -13,6 +13,7 @@ import { FotosComponent } from './fotos/fotos.component';
 import { appRoutingModule } from './app-routing.module';
 import { HeaderFotosComponent } from './fotos/header-fotos/header-fotos.component';
 import { BodyFotosComponent } from './fotos/body-fotos/body-fotos.component';
+import { TopComponent } from './fotos/body-fotos/top/top.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BodyFotosComponent } from './fotos/body-fotos/body-fotos.component';
     VideoComponent,
     FotosComponent,
     HeaderFotosComponent,
-    BodyFotosComponent    
+    BodyFotosComponent,
+    TopComponent    
   ],
   imports: [
     BrowserModule,
