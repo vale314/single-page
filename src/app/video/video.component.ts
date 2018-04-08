@@ -13,9 +13,10 @@ export class VideoComponent implements OnInit  {
   @Input() muted:boolean;
   mobile:boolean
   myVar:boolean = false;
-  videos=`${window.location.href}video`
+  videos=`${window.location.origin}/video`
 
   constructor(private httpClient:HttpClient) {
+    console.log(window.location.origin)
     this.httpClient.get('/mobile',{responseType: 'json'})
     .subscribe(
       (data:any)=>{

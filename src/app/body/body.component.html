@@ -1,3 +1,333 @@
-<p>
-  body workfs!
-</p>
+<app-header></app-header>
+
+		<!-- <section class="hero bg-overlay" id="hero" data-bg="../../assets/img/beauty.jpg"> -->
+			<section class="hero " id="hero">
+				<app-video [muted]="muted"></app-video>
+			<div class="text">
+				<p class="lead d-none d-sm-none d-md-block "><span class="bold">De Los Mejores Mariachis De JALISCO</span></p>
+				<h1><span class="bold">{{name}}</span></h1>
+				<div class="cta">
+					<a href="#contact" class="d-none d-sm-none d-md-inline btn btn-primary smooth-link" >Contactanos</a>
+					<a href="tel:3339473899" id="contacto" class="d-inline d-sm-inline d-md-none btn btn-primary" >Contactanos</a>
+				</div>
+				<div class="cta ">
+						<a href="#blog"  class="d-none d-sm-none d-md-inline btn-primary smooth-link btn btn-warning">Conocenos</a>
+					</div>
+			</div>
+		</section>
+		<section class="padding" id="features">
+			<div class="container mt-3">
+				<div class="row">
+					<div class="col-12 col-md-4 col-sm-12">
+						<div class="list-item">
+							<div class="icon">
+								<i class="ion-mic-c"></i>
+							</div>
+							<div class="desc">
+								<h2>Conformada La Agrupacion</h2>
+								<p>
+										La agrupación puede estar conformada por un arpa,  vihuela,   guitarra,  guitarrón, trompetas y violines.
+								</p>							
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4 col-sm-12">
+						<div class="list-item">
+							<div class="icon">
+								<i class="ion-speakerphone"></i>
+							</div>
+							<div class="desc">
+								<h2>Mariachi Por Excelencia</h2>
+								<p>
+									Mariachi Los Nungaray uno de los mariachis mas calificados y reconocidos en guadalajara
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-4 col-sm-12">
+						<div class="list-item no-spacing">
+							<div class="icon">
+									<i class="ion-pricetags"></i>
+							</div>
+							<div class="desc">
+								<h2>Adaptable</h2>
+								<p>
+									Mariachi listo para cualquier evento que tengas desde serenatas hasta fiesta o eventos adaptable para lo que necesites
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="padding bg-grey" id="blog">
+			<div class="container">
+				<div class="d-none d-sm-none d-md-block">
+					<a id="button" (click)="clickToMuted()"><div class="icon "> <i class="ion-volume-high"></i> </div></a>
+
+				</div>
+				
+				<h2 class="section-title" >Te invitamos a escucharnos</h2>
+				<p class="section-lead text-muted d-none d-sm-none d-md-block">Disfruta al cantar y escuchar tus canciones favoritas de artistas tan queridos como lo son Juan Gabriel, Vicente Fernández, Alejandro Fernández, Joan Sebastian solo por mencionar algunos, acompaña con música esos momentos tan especiales </p>
+				<p class="section-lead text-muted d-block d-sm-block d-md-none">Escucha tus canciones favoritas  Juan Gabriel, Vicente Fernández, Alejandro Fernández, Joan Sebastian solo por mencionar algunos. </p>
+				<div class="section-body">
+					<div class="row col-spacing">
+						<div class="col-12 col-md-6 col-lg-4">
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/eD_MTo7PjV8" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En Diciembre 30, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=eD_MTo7PjV8"  data-id="1" target="_blank">17 Años - Angeles Azules</a></h4>
+									<p class="card-text" >Una de las canciones mas famosas del gran grupo Los Angeles Azules Interpretada por el Mariachi Los Nungaray</p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="1" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
+							    </div>
+						    </div>
+						  </article>
+					  </div>
+					  <div class="col-12 col-md-6 col-lg-4">
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/HK6tbkZ9AjA" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En Enero 12, 2018</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=HK6tbkZ9AjA"  data-id="1" target="_blank">Adios Amor - Christian Nodal</a></h4>
+									<p class="card-text" >Una Cancion que rompe las fronteras en el mundo Interpretada por el Mariachi Los Nungaray</p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="2" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
+							    </div>
+						    </div>
+						  </article>
+					  </div>
+					  <div class="col-12 col-md-6 col-lg-4">
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/Pm8wHBTfgVA" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En diciembre 22, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=Pm8wHBTfgVA"  data-id="1" target="_blank">Se Va Muriendo Mi Alma - Marco Solis</a></h4>
+									<p class="card-text" >“Se va muriendo mi alma” es un clásico de la música mexicana, es una cancion que la hemos escuchado en miles de versiones</p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="3" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
+							    </div>
+						    </div>
+						  </article>
+					  </div>
+					  <div class="col-12 col-md-6 col-lg-4">
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/wRS7D_YkLUg" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En diciembre 2, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=wRS7D_YkLUg"  data-id="1" target="_blank">María Chuchena/La bruja</a></h4>
+									<p class="card-text" >“Se va muriendo mi alma” es un clásico de la música mexicana, es una cancion que la hemos escuchado en miles de versiones</p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="4" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
+							    </div>
+						    </div>
+						  </article>
+					  </div>
+					  <div class="col-12 col-md-6 col-lg-4">
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/CJlgb3eqxG4" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En diciembre 21, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=CJlgb3eqxG4"  data-id="1" target="_blank">La Bikina</a></h4>
+									<p class="card-text" >La Bikina es una famosa canción mexicana compuesta por Rubén Fuentes, en el año de 1964. </p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="5" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
+							    </div>
+						    </div>
+						  </article>
+					  </div>
+					  <div class="col-12 col-md-6 col-lg-4">
+							<article class="card" >
+								<div class="youtube">
+									<iframe class="video"  allowfullscreen width="325" height="250" src="https://www.youtube.com/embed/Lz9zKcPYQLk" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+								</div>
+								<div class="card-body">
+									<div class="card-subtitle mb-2 text-muted">by <a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" target="_blank">Los Nungaray</a> En diciembre 21, 2017</div>
+									<h4 class="card-title"><a href="https://www.youtube.com/watch?v=Lz9zKcPYQLk"  data-id="1" target="_blank">Y Fue Así - Julión Álvarez</a></h4>
+									<p class="card-text" >"Y Fue Asi" una de las mas grandes canciones reconocidas a nivel mundial por el gran Julion Alvarez Interpretada por Mariachi Los Nungaray </p>
+									<div class="text-right" >						    	
+										<a href="https://www.youtube.com/channel/UCFezGaxBNtM7b0ci1Q5BdsQ" class="card-more" data-id="6" target="_blank">Ver mas <i class="ion-ios-arrow-right"></i></a>
+							    	</div>
+						    	</div>
+						  </article>
+					  </div>
+					</div>
+
+					
+
+				</div>
+
+				<div class="row align-items-center mt-5">
+					<div class="col-12 col-md-6">
+						<h2>Suscribete A Nuestra Pagina De Facebook</h2>
+						<p class="text-muted">Enterate de las ultimas novedades y promociones y mucho mas</p>
+					</div>					
+					<div class="col-12 col-md-6">
+						<form class="subscribe" action="#">
+							<a href="https://www.facebook.com/MariachiLosNungaray/" class="btn btn-lg btn-block btn-primary" target="_blank">Suscribirse</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-overlay padding" id="project" >
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-md-6">
+						
+							
+
+								<div class="card mb-4 box-shadow text-center">
+										<div class="card-header">
+										  <h4 class="section-title text-center mt-3 mb-3">Mini Mariachi</h4>
+										</div>
+										<div class="card-body">
+										  <h1 class="card-title pricing-card-title">$1,600 <small class="text-muted">/ hr</small></h1>
+										  <ul class="list-unstyled mt-3 mb-4">
+											<li>Cuatro integrantes</li>
+											<p class="section-lead text-center text-muted">Solo de lunes a jueves</p>
+
+											<!--<li>2 GB of storage</li>
+											<li>Email support</li>
+											<li>Help center access</li>
+										  -->
+										  </ul>
+										  <button type="button" class=" d-none d-sm-none d-md-inline btn btn-lg btn-block btn-primary"><a href="#contact" style="color:whitesmoke">Contactanos</a></button>
+										  <a href="tel:3339473899"  class="d-inline d-sm-inline d-md-none btn btn-lg btn-block btn-primary" >Contactanos</a>
+									  </div>
+									  </div>
+
+						
+					</div>
+					<div class="col-12 col-md-6">
+						<div class="projects-details">
+							<div class="projects-badge">
+								Nosotros
+							</div>
+							<h2 class="projects-title">Mariachi - Los Nungaray</h2>
+							<p class="projects-description" style="color:whitesmoke">
+									Manejamos un atractivo concepto de mariachi versátil para amenizar fiestas y celebraciones del público en general a nivel mundial. Interpretamos géneros como la banda romántica, cumbia, norteño, rock y principalmente la música tradicional mexicana.
+									En Mariachi Los Nungaray nos distinguimos por garantizar cada uno de nuestros servicios, además de que llegamos con puntualidad a cada presentación. Nuestra labor está encaminada a que quienes nos contratan, escuchen música típica de México con excelentes interpretaciones.
+							</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+			<div class="container mt-5">
+					<h2 class="section-title text-center mt-3 mb-3">Promociones en fin de semana</h2>
+					<p class="section-lead text-center text-muted">Atendemos las 24hrs cotizaciones sin compromiso.</p>
+					<div class="card-deck mb-3 text-center">
+						<div class="card mb-4 box-shadow">
+						  <div class="card-header">
+							<h4 class="my-0 font-weight-normal">Mini Mariachi</h4>
+						  </div>
+						  <div class="card-body">
+							<h1 class="card-title pricing-card-title">$1,900 <small class="text-muted">/ hr</small></h1>
+							<ul class="list-unstyled mt-3 mb-4">
+							  <li>Cuatro integrantes</li>
+							  <!--<li>2 GB of storage</li>
+							  <li>Email support</li>
+							  <li>Help center access</li>
+							-->
+							</ul>
+							<button type="button" class=" d-none d-sm-none d-md-inline btn btn-lg btn-block btn-primary"><a href="#contact" style="color:whitesmoke">Contactanos</a></button>
+							<a href="tel:3339473899"  class="d-inline d-sm-inline d-md-none btn btn-lg btn-block btn-primary" >Contactanos</a>
+						</div>
+						</div>
+						<div class="card mb-4 box-shadow">
+						  <div class="card-header">
+							<h4 class="my-0 font-weight-normal">Mariachi</h4>
+						  </div>
+						  <div class="card-body">
+							<h1 class="card-title pricing-card-title">$2,700 <small class="text-muted">/ hr</small></h1>
+							<ul class="list-unstyled mt-3 mb-4">
+							  <li>Seis Integrantes </li>
+							  <!--<li>10 GB of storage</li>
+							  <li>Priority email support</li>
+							  <li>Help center access</li>-->
+							</ul>
+							<button type="button" class=" d-none d-sm-none d-md-inline btn btn-lg btn-block btn-primary"><a href="#contact" style="color:whitesmoke">Contactanos</a></button>
+							<a href="tel:3339473899"  class="d-inline d-sm-inline d-md-none btn btn-lg btn-block btn-primary" >Contactanos</a>
+						</div>
+						</div>
+						<div class="card mb-4 box-shadow">
+						  <div class="card-header">
+							<h4 class="my-0 font-weight-normal">Mariachi Grande</h4>
+						  </div>
+						  <div class="card-body">
+							<h1 class="card-title pricing-card-title">$4,400 <small class="text-muted">/ hr</small></h1>
+							<ul class="list-unstyled mt-3 mb-4">
+							  <li>Diez Integrantes</li>
+							  <!--<li>15 GB of storage</li>
+							  <li>Phone and email support</li>
+							  <li>Help center access</li>-->
+							</ul>
+							<button type="button" class=" d-none d-sm-none d-md-inline btn btn-lg btn-block btn-primary"><a href="#contact" style="color:whitesmoke">Contactanos</a></button>
+							<a href="tel:3339473899"  class="d-inline d-sm-inline d-md-none btn btn-lg btn-block btn-primary" >Contactanos</a>
+						</div>
+						</div>
+					</div>
+				
+			</div>
+
+		<section class="padding bg-grey" id="contact">
+			<div class="container">
+				<h2 class="section-title text-center">Contactanos</h2>
+				<p class="section-lead text-center text-muted"> </p>
+				<div class="section-body">				
+					<div class="row ">
+						<div class="col-12 col-md-5">
+							<p class="section-lead text-center text-muted"> Contactanos pregunta por nuestras promociones y solicita tu cotizacion</p>
+							<ul class="contact-icon">
+								<li>
+									<i class="ion ion-ios-telephone d-none d-sm-none d-md-inline" ></i>
+									<h4 class="d-none d-sm-none d-md-inline">+ 33-39-47-38-99</h4>
+								</li>								
+								<li>
+									<i class="ion ion-ios-telephone d-none d-sm-none d-md-inline" ></i>
+									<h4 class="d-none d-sm-none d-md-inline">+ 33-12-92-91-07</h4>
+								</li>
+								<a href="tel:3339473899" class="d-inline d-sm-inline d-md-none" style="color:black"><li><i class="ion ion-ios-telephone"></i> <div>+3339473899</div></li></a>
+								<a href="tel:3312929107" class="d-inline d-sm-inline d-md-none" style="color:black"><li><i class="ion ion-ios-telephone"></i> <div>+3312929107</div></li></a>
+								<li><i class="ion ion-ios-email"></i><a style="color:black" href="mailto:rafael.4183ivei@gmail.com">rafael.4183ivei@gmail.com</a></li>
+							</ul>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="callout">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-md-8 text">
+						<h3>Preparate para un mariachi inolvidable</h3>
+					</div>
+					<div class="col-12 col-md-4 cta">
+						<a href="tel:3339473899" class="btn btn-outline-primary">
+							COMUNICATE AHORA
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<app-footer></app-footer>

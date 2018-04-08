@@ -9,6 +9,10 @@ import { FooterComponent } from './footer/footer.component';
 import { VideoComponent } from './video/video.component';
 import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
+import { FotosComponent } from './fotos/fotos.component';
+import { appRoutingModule } from './app-routing.module';
+import { HeaderFotosComponent } from './fotos/header-fotos/header-fotos.component';
+import { BodyFotosComponent } from './fotos/body-fotos/body-fotos.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,17 @@ import {HttpClientModule} from '@angular/common/http';
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    VideoComponent    
+    VideoComponent,
+    FotosComponent,
+    HeaderFotosComponent,
+    BodyFotosComponent    
   ],
   imports: [
     BrowserModule,
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    appRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
