@@ -1,0 +1,4 @@
+{
+    "dbUri": "mongodb://localhost/nungaray",
+    "jwtSecret": "NUGARAY"
+  }

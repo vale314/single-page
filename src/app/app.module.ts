@@ -17,6 +17,10 @@ import { BodyFotosComponent } from './fotos/body-fotos/body-fotos.component';
 import { TopComponent } from './fotos/body-fotos/top/top.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './admin/login/login.component';
+import { DeleteComponent } from './admin/delete/delete.component';
+import { BuscarComponent } from './admin/buscar/buscar.component';
+import { AgregarComponent } from './admin/agregar/agregar.component';
+import { HeaderAdminComponent } from './admin/header-admin/header-admin.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,10 @@ import { LoginComponent } from './admin/login/login.component';
     TopComponent,
     AdminComponent,
     LoginComponent,
+    DeleteComponent,
+    BuscarComponent,
+    AgregarComponent,
+    HeaderAdminComponent,
         
   ],
   imports: [

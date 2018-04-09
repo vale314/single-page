@@ -7,8 +7,30 @@ const fs = require("fs")
 const http = require("https")
 const url = require("url")
 const bodyParser = require('body-parser');
+const config = require('./config/index.json');
+const passport = require('passport');
+
+
+require('./server/models/index').connect(config.dbUri);
 
 app.use(bodyParser.json());
+
+const Ingreso =require('./server/registro/admin/ingreso');
+ Ingreso.Nuevo();
+
+
+ app.use(passport.initialize());
+ const localLoginStrategy = require('./server/passport/local-login');
+ passport.use('local-login', localLoginStrategy);
+
+
+
+
+
+
+
+
+
 
 router.get('/mobile',(req,res)=>{
     md = new MobileDetect(req.headers['user-agent']);
@@ -33,18 +55,59 @@ router.get('/video',(req,res)=>{
 
 })
 
-router.post('/fotos',(req,res)=>{
+
+
+
+router.post('/login', (req, res, next) => {
+
+  
+    return passport.authenticate('local-login', (err, token, userData) => {
+      if (err) {
+        if (err.name === 'IncorrectCredentialsError') {
+          return res.status(400).json({
+            success: false,
+            message: err.message
+          });
+        }
+  
+        return res.status(400).json({
+          success: false,
+          message: 'Could not process the form.'
+        });
+      }
+  
+  
+      return res.json({
+        success: true,
+        message: 'You have successfully logged in!',
+        token,
+        user: userData,
+        status:200
+      });
+    })(req, res, next);
+  });
+
+
+
+
+
+router.post('/find',(req,res)=>{
     console.log(req.body);
-
-
-    if(req.body.email==`holas@gmail.com` && req.body.password == `12345`){
-        res.status(200).json({status:200}).end();
-    }else{
-        res.status(401).json({status:401}).end();
-    }
-
-    
+    res.status(200).json({status:'Fyes'}).end();
 })
+
+router.post('/delete',(req,res)=>{
+    console.log(req.body);
+    res.status(200).json({status:'Dyes'}).end();
+})
+
+router.post('/add',(req,res)=>{
+    console.log(req.body);
+    res.status(200).json({status:'Ayes'}).end();
+})
+
+
+
 
 router.get('*',(req,res)=>{
   

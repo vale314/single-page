@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="form" method="POST">
+      <div class="input-group mb-3 mt-5">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Id</span>
+          </div>
+          <input type="number" class="form-control" placeholder="Id" [(ngModel)]="datas.id" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 mt-5">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Name</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="datas.name" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 mt-5">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Description</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Description"  [(ngModel)]="datas.description" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 mt-5">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Links</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Links"  [(ngModel)]="datas.links" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="row" style="padding-top: 1rem">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success" (click)="onSubmit($event)"><i class="fa fa-sign-in"></i> Add</button>
+            </div>
+        </div>   
+  </div>
+</div>

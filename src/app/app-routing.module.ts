@@ -5,6 +5,9 @@ import {FotosComponent} from './fotos/fotos.component';
 import { BodyComponent } from './body/body.component';
 import { LoginComponent } from './admin/login/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { DeleteComponent } from './admin/delete/delete.component';
+import { BuscarComponent } from './admin/buscar/buscar.component';
+import { AgregarComponent } from './admin/agregar/agregar.component';
 
 const appRoutes: Routes = [
     {
@@ -22,8 +25,23 @@ const appRoutes: Routes = [
     },
     {
         path:'admin',
-        component:AdminComponent
+        component:AdminComponent,
+        children:[
+            {
+                path:'find',
+                component:BuscarComponent
+            },
+            {
+                path:'delete',
+                component:DeleteComponent
+            },
+            {
+                path:'add',
+                component:AgregarComponent
+            }
+        ]
     },
+    
     {   path: '**',  
         component: BodyComponent,
         redirectTo:''

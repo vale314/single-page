@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(event){
     event.preventDefault();    
-    this.httpClient.post(`/fotos`,{
+    this.httpClient.post(`/login`,{
       email:this.email,
       password:this.password
     },
