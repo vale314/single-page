@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { appRoutingModule } from './app-routing.module';
 import { HeaderFotosComponent } from './fotos/header-fotos/header-fotos.component';
 import { BodyFotosComponent } from './fotos/body-fotos/body-fotos.component';
 import { TopComponent } from './fotos/body-fotos/top/top.component';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './admin/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,13 @@ import { TopComponent } from './fotos/body-fotos/top/top.component';
     FotosComponent,
     HeaderFotosComponent,
     BodyFotosComponent,
-    TopComponent    
+    TopComponent,
+    AdminComponent,
+    LoginComponent,
+        
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),

@@ -6,6 +6,9 @@ const MobileDetect = require('mobile-detect');
 const fs = require("fs")
 const http = require("https")
 const url = require("url")
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 router.get('/mobile',(req,res)=>{
     md = new MobileDetect(req.headers['user-agent']);
@@ -29,6 +32,20 @@ router.get('/video',(req,res)=>{
       fs.createReadStream(path).pipe(res)
 
 })
+
+router.post('/fotos',(req,res)=>{
+    console.log(req.body);
+
+
+    if(req.body.email==`holas@gmail.com` && req.body.password == `12345`){
+        res.status(200).json({status:200}).end();
+    }else{
+        res.status(401).json({status:401}).end();
+    }
+
+    
+})
+
 router.get('*',(req,res)=>{
   
     res.sendFile(path.join(__dirname,'./dist/index.html'));

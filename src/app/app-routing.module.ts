@@ -3,7 +3,8 @@ import {Routes,RouterModule} from '@angular/router';
 
 import {FotosComponent} from './fotos/fotos.component';
 import { BodyComponent } from './body/body.component';
-
+import { LoginComponent } from './admin/login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
     {
@@ -14,6 +15,14 @@ const appRoutes: Routes = [
     {
         path:'fotos',
         component:FotosComponent,
+    },
+    {
+        path:'login',
+        component: LoginComponent
+    },
+    {
+        path:'admin',
+        component:AdminComponent
     },
     {   path: '**',  
         component: BodyComponent,
