@@ -16,6 +16,7 @@ export class HeaderAdminComponent implements OnInit {
 
 
   signOut(){
+    localStorage.clear()
     this.router.navigate(['/'])
   }
 }

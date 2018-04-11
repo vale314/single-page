@@ -71,7 +71,6 @@ module.exports = new PassportLocalStrategy({
                           name: admin.name,
                           types: 'use',
                         };
-                        console.log(token)
                         //retornamos con el done le decimos que fianlizamos en local-login mandamos el token getInternalInstanceReadyForUpdate
                         //y el dato que es el nombre del usuario encontrado
                       return done(null, token, data);

@@ -26,9 +26,12 @@ const Ingreso =require('./server/registro/admin/ingreso');
 
 
 
+ const authCheckMiddlewareAdm = require('./server/middleware/admin');
+ app.use('/admin', authCheckMiddlewareAdm);
 
-
-
+router.get('/admin',(req,res)=>{
+  return res.status(200).json({status:200}).end()
+})
 
 
 
@@ -117,6 +120,6 @@ router.get('*',(req,res)=>{
 app.use(express.static('./dist'));
 app.use('/',router);
 
-app.listen(3005,'192.168.1.76' ,()=>{
+app.listen(3000,'192.168.1.76' ,()=>{
     console.log("Server Is Running");
 })

@@ -27,6 +27,15 @@ export class VideoComponent implements OnInit  {
 
    }
 
+   videosM(){
+    if(this.mobile){
+      return 
+    }
+    else{
+      return this.videos
+    }
+   }
+
   ngOnInit() {
     
     Observable.interval(2000)

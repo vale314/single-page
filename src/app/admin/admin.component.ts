@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
+import { DataService } from './auth.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -7,9 +8,12 @@ import {Router} from '@angular/router'
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private DataService:DataService) {
+    
+   }
 
   ngOnInit() {
+    this.DataService.get();
   }
 
 

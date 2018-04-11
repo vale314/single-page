@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -21,7 +22,7 @@ import { DeleteComponent } from './admin/delete/delete.component';
 import { BuscarComponent } from './admin/buscar/buscar.component';
 import { AgregarComponent } from './admin/agregar/agregar.component';
 import { HeaderAdminComponent } from './admin/header-admin/header-admin.component';
-
+import {DataService} from './admin/auth.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,9 +48,10 @@ import { HeaderAdminComponent } from './admin/header-admin/header-admin.componen
     CollapseModule.forRoot(),
     BsDropdownModule.forRoot(),
     HttpClientModule,
-    appRoutingModule
+    appRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
