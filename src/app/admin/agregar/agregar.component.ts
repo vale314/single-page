@@ -11,7 +11,7 @@ export class AgregarComponent implements OnInit {
     id: null,
     name : '',
     description: '',
-    links : ''
+    link : ''
   }
 
 
@@ -22,7 +22,6 @@ export class AgregarComponent implements OnInit {
 
   onSubmit(event){
     event.preventDefault();
-    event.preventDefault();    
     this.httpClient.post(`/add`,this.datas,
   )
     .subscribe(

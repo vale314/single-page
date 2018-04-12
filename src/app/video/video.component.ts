@@ -13,32 +13,31 @@ export class VideoComponent implements OnInit  {
   @Input() muted:boolean;
   mobile:boolean
   myVar:boolean = false;
-  videos=`${window.location.origin}/video`
+  videos=``
 
   constructor(private httpClient:HttpClient) {
     console.log(window.location.origin)
     this.httpClient.get('/mobile',{responseType: 'json'})
     .subscribe(
       (data:any)=>{
-        this.mobile=data.mobile;
+        this.mobile=data.mobile
+        if(data.mobile){
+          this.videos=``
+        }else{
+          console.log("pc")
+          this.videos=`${window.location.origin}/video`
+        }
       }
     )
 
 
    }
 
-   videosM(){
-    if(this.mobile){
-      return 
-    }
-    else{
-      return this.videos
-    }
-   }
+  
 
   ngOnInit() {
     
-    Observable.interval(2000)
+    Observable.interval(1000)
     .takeWhile(() => this.myVar = true)
     .subscribe(i => { 
         // This will be called every 10 seconds until `stopCondition` flag is set to true

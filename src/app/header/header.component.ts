@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
   }
 
   click(){
-    console.log("hello")
     window.scrollTo(0,1275);
   }
   gPhotos(){

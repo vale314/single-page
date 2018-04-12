@@ -9,9 +9,10 @@ const url = require("url")
 const bodyParser = require('body-parser');
 const config = require('./config/index.json');
 const passport = require('passport');
-
-
 require('./server/models/index').connect(config.dbUri);
+
+const addPhotos = require('./server/registro/photos/index.js')
+
 
 app.use(bodyParser.json());
 
@@ -45,6 +46,7 @@ router.get('/mobile',(req,res)=>{
 })
 
 router.get('/video',(req,res)=>{
+     console.log("E")
     const path = './server/assets/rafa.mp4'
 
       const file = fs.createReadStream(path)
@@ -104,10 +106,18 @@ router.post('/delete',(req,res)=>{
     res.status(200).json({status:'Dyes'}).end();
 })
 
-router.post('/add',(req,res)=>{
-    console.log(req.body);
-    res.status(200).json({status:'Ayes'}).end();
-})
+router.post('/add',(req,res)=>{    
+    addPhotos.Nuevo(req.body).then((a)=>{
+      if(!a)
+        return res.status(200).json({status:'Ayes'}).end();
+      if(a == 1100)  
+        return res.status(400).json({error:'Code Index Duplicate'}).end();
+        
+        return res.status(400).end(); 
+    })
+    
+    
+    })
 
 
 
@@ -120,6 +130,6 @@ router.get('*',(req,res)=>{
 app.use(express.static('./dist'));
 app.use('/',router);
 
-app.listen(3000,'192.168.1.76' ,()=>{
+app.listen(5000,'192.168.1.76' ,()=>{
     console.log("Server Is Running");
 })

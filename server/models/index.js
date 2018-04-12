@@ -13,5 +13,6 @@ module.exports.connect = (uri) => {
   });
   // load models
 
+  require('./photos');
   require('./admin');
 };
