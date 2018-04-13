@@ -12,8 +12,9 @@ const passport = require('passport');
 require('./server/models/index').connect(config.dbUri);
 
 const addPhotos = require('./server/registro/photos/index.js')
-
-
+const deletePhoto = require('./server/registro/photos/delete')
+const searchPhoto = require('./server/registro/photos/search')
+const showAll = require('./server/registro/photos/showAll')
 app.use(bodyParser.json());
 
 const Ingreso =require('./server/registro/admin/ingreso');
@@ -97,26 +98,41 @@ router.post('/login', (req, res, next) => {
 
 
 router.post('/find',(req,res)=>{
-    console.log(req.body);
-    res.status(200).json({status:'Fyes'}).end();
+    searchPhoto.search(req.body.id).then((a)=>{
+      if(!a)
+        return res.status(400).json({error:'Not Find or Error'}).end()
+      return res.status(200).json(a).end();  
+    })
 })
 
 router.post('/delete',(req,res)=>{
-    console.log(req.body);
-    res.status(200).json({status:'Dyes'}).end();
+    deletePhoto.deleteP(req.body.id).then((a)=>{
+      if(a==0)
+        return res.status(200).json({status:'yes'}).end();
+      return res.status(400).json(a).end();
+    })
+
 })
 
-router.post('/add',(req,res)=>{    
-    addPhotos.Nuevo(req.body).then((a)=>{
-      if(!a)
-        return res.status(200).json({status:'Ayes'}).end();
-      if(a == 1100)  
-        return res.status(400).json({error:'Code Index Duplicate'}).end();
-        
-        return res.status(400).end(); 
-    })
-    
-    
+router.get('/showall',(req,res)=>{
+  showAll.showAll().then((a)=>{
+    if(a==0)
+      return res.status(400).json({error:'Errror Or Null'}).end();
+    return res.status(200).json(a).end();
+  })
+
+})
+
+
+router.post('/add',(req,res)=>{   
+      addPhotos.Nuevo(req.body).then((a)=>{
+        if(!a)
+          return res.status(200).json({status:'Ayes'}).end();
+        if(a == 11000)
+          return res.status(400).json({error:"Code Index Duplicate"}).end();
+
+        return res.status(400).json({errors:"Code Index Duplicate"}).end();
+      })
     })
 
 
