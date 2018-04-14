@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class DeleteComponent implements OnInit {
   id:number = null
-  error=[]
+  error={error:null}
   msj=[]
   hiddens=true
   hiddensT=true

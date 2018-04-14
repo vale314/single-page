@@ -14,7 +14,7 @@ export class AgregarComponent implements OnInit {
     link : ''
   }
 
-  error=[]
+  error={error:null}
   msj=[]
   hiddens=true
   hiddensT=true

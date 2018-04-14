@@ -8,8 +8,11 @@ import {HttpClient} from '@angular/common/http';
 })
 export class BuscarComponent implements OnInit {
   id:number=null
-  image=[]
-  error=[]
+  image={id: null,
+    name : '',
+    description: '',
+    link : ''}
+  error={error:null}
   hiddens:boolean = true
   constructor(private httpClient:HttpClient) { }
   ngOnInit() {
@@ -25,7 +28,10 @@ export class BuscarComponent implements OnInit {
       },
       err =>{
         this.error=err.error
-        this.image=[]
+        this.image={id: null,
+          name : '',
+          description: '',
+          link : ''}
         this.hiddens=false
       },
       () => {
