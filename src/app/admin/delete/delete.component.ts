@@ -8,8 +8,11 @@ import {HttpClient} from '@angular/common/http';
 })
 export class DeleteComponent implements OnInit {
   id:number = null
+  error=[]
+  msj=[]
+  hiddens=true
+  hiddensT=true
   constructor(private httpClient:HttpClient) { }
-
   ngOnInit() {
   }
 
@@ -20,13 +23,16 @@ export class DeleteComponent implements OnInit {
   )
     .subscribe(
       (data:any)=>{
-        console.log(data)
-        if(data.status == 200){
-         console.log('listo')
-        }
+        this.msj=data.status
+        this.hiddensT=false
+        this.hiddens=true
 
       },
-      err =>{console.log(err)},
+      err =>{
+        this.error= err.error
+        this.hiddens=false
+        this.hiddensT=true
+      },
       () => {
           console.log('call API to save');
       }

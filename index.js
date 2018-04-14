@@ -100,7 +100,7 @@ router.post('/login', (req, res, next) => {
 router.post('/find',(req,res)=>{
     searchPhoto.search(req.body.id).then((a)=>{
       if(!a)
-        return res.status(400).json({error:'Not Find or Error'}).end()
+        return res.status(400).json({error:'Not Find or Error',status:400}).end()
       return res.status(200).json(a).end();  
     })
 })
@@ -108,8 +108,8 @@ router.post('/find',(req,res)=>{
 router.post('/delete',(req,res)=>{
     deletePhoto.deleteP(req.body.id).then((a)=>{
       if(a==0)
-        return res.status(200).json({status:'yes'}).end();
-      return res.status(400).json(a).end();
+        return res.status(200).json({status:'Delete'}).end();
+      return res.status(400).json({error:'Errror Or Null'}).end();
     })
 
 })
@@ -124,7 +124,10 @@ router.get('/showall',(req,res)=>{
 })
 
 
-router.post('/add',(req,res)=>{   
+router.post('/add',(req,res)=>{
+    if(req.body.id == null || req.body.link == '')
+      return res.status(400).json({error:"Invalid"}).end();
+
       addPhotos.Nuevo(req.body).then((a)=>{
         if(!a)
           return res.status(200).json({status:'Ayes'}).end();

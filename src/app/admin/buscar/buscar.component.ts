@@ -8,25 +8,26 @@ import {HttpClient} from '@angular/common/http';
 })
 export class BuscarComponent implements OnInit {
   id:number=null
+  image=[]
+  error=[]
+  hiddens:boolean = true
   constructor(private httpClient:HttpClient) { }
-
   ngOnInit() {
   }
 
   onSubmit(event){
     event.preventDefault();
-    event.preventDefault();    
-    this.httpClient.post(`/find`,{id:this.id}
-  )
+    this.httpClient.post(`/find`,{id:this.id})
     .subscribe(
       (data:any)=>{
-        console.log(data)
-        if(data.status == 200){
-         console.log('listo')
-        }
-
+          this.image = data
+          this.hiddens=true
       },
-      err =>{console.log(err)},
+      err =>{
+        this.error=err.error
+        this.image=[]
+        this.hiddens=false
+      },
       () => {
           console.log('call API to save');
       }

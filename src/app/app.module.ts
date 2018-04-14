@@ -22,7 +22,8 @@ import { DeleteComponent } from './admin/delete/delete.component';
 import { BuscarComponent } from './admin/buscar/buscar.component';
 import { AgregarComponent } from './admin/agregar/agregar.component';
 import { HeaderAdminComponent } from './admin/header-admin/header-admin.component';
-import {DataService} from './admin/auth.service'
+import {DataService} from './admin/auth.service';
+import { ShowPComponent } from './admin/show-p/show-p.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import {DataService} from './admin/auth.service'
     BuscarComponent,
     AgregarComponent,
     HeaderAdminComponent,
+    ShowPComponent,
         
   ],
   imports: [

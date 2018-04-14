@@ -8,6 +8,7 @@ import { AdminComponent } from './admin/admin.component';
 import { DeleteComponent } from './admin/delete/delete.component';
 import { BuscarComponent } from './admin/buscar/buscar.component';
 import { AgregarComponent } from './admin/agregar/agregar.component';
+import { ShowPComponent } from './admin/show-p/show-p.component';
 
 const appRoutes: Routes = [
     {
@@ -38,6 +39,10 @@ const appRoutes: Routes = [
             {
                 path:'add',
                 component:AgregarComponent
+            },
+            {
+                path:'showP',
+                component:ShowPComponent
             }
         ]
     },

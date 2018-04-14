@@ -1,0 +1,21 @@
+<div class="banner-bottom container-fluid" id="gallery">
+  <div class="container-fluid m-0 p-0">
+      <h3 class="title-w3l">Gallery</h3>
+      <div class="row m-0 p-0">
+          <div class="col-md-3 m-0 p-0" *ngFor="let image of images">
+              <div class="agile_gallery_grid m-0 p-" >
+                  <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." [attr.href]="image.link">
+                      <div class="agile_gallery_grid1">
+                          <img [src]="image.link" alt=" " class="img-responsive" />
+                          <div class="w3layouts_gallery_grid1_pos">
+                              <h3>{{image.name}}</h3>
+                              <p>{{image.description}}</p>
+                              <p>{{image.id}}</p>
+                          </div>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+     
+</div>
