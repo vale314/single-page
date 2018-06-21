@@ -13,27 +13,23 @@ export class VideoComponent implements OnInit  {
   @Input() muted:boolean;
   mobile:boolean
   myVar:boolean = false;
-  videos=``
+  videos:string=("http://192.168.1.76:4200/video")
 
   constructor(private httpClient:HttpClient) {
     console.log(window.location.origin)
-    this.httpClient.get('/mobile',{responseType: 'json'})
+    this.httpClient.get('/video',{responseType: 'json'})
     .subscribe(
       (data:any)=>{
-        this.mobile=data.mobile
-        if(data.mobile){
-          this.videos=``
-        }else{
-          console.log("pc")
-          this.videos=`${window.location.origin}/video`
-        }
-      }
-    )
+      }  
+    ) 
 
 
    }
 
-  
+  video(){
+
+    return ("http://192.168.1.76:4200/video")
+  }
 
   ngOnInit() {
     

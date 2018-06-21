@@ -40,14 +40,16 @@ router.get('/admin',(req,res)=>{
 router.get('/mobile',(req,res)=>{
     md = new MobileDetect(req.headers['user-agent']);
     if( JSON.stringify(md.phone())  != 'null' || JSON.stringify(md.mobile()) !='null' ){
+        console.log("mobile")
         return res.json({mobile:true}).end();
     }
+    console.log("pc ")
     return res.json({mobile:false}).end();
 
 })
 
 router.get('/video',(req,res)=>{
-     console.log("E")
+     console.log("Video")
     const path = './server/assets/rafa.mp4'
 
       const file = fs.createReadStream(path)
@@ -58,7 +60,6 @@ router.get('/video',(req,res)=>{
   
       res.writeHead(200, head)
       fs.createReadStream(path).pipe(res)
-
 })
 
 
@@ -149,6 +150,6 @@ router.get('*',(req,res)=>{
 app.use(express.static('./dist'));
 app.use('/',router);
 
-app.listen(5000,'192.168.1.76' ,()=>{
+app.listen(4200,'192.168.1.76' ,()=>{
     console.log("Server Is Running");
 })

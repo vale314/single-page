@@ -9,8 +9,8 @@
                 </div>
                     
               
-        <video #video [muted]="muted"  play inline autoplay  loop id="bgvid" class="d-none d-sm-none d-md-block  ">
-          <source src="{{videos}}" type="video/mp4">
+        <video  [muted]="muted" [src]="video()"  play inline autoplay  loop id="bgvid" class="d-none d-sm-none d-md-block  ">
+          <source [src]="video()" type="video/mp4">
           </video>
     </div>
 
