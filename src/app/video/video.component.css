@@ -30,12 +30,13 @@
     
       background-size: cover;
       transition: 1s opacity;
+      background: transparent url('../../assets/img/rafa1.png') 50% 50% / cover no-repeat ;
     
 }
 
 @media screen and (max-device-width: 800px) {
     .slider { 
-        background: url(https://scontent.fgdl5-1.fna.fbcdn.net/v/t1.0-9/25552067_552126321790932_1620459106336366433_n.jpg?oh=97214c3f3c4bdf35e8a738c1c3eec8c1&oe=5B1450F5);
+        background: url(https://image.ibb.co/cXguS8/nungaray.jpg);
         height: 100vh;
         background-size: cover;
         background-position: center; }

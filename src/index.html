@@ -14,8 +14,12 @@
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
 <script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="scripts.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+
 <script type="application/ld+json">
+  
   {
     "@context": "http://mariachilosnungaray.com.mx",
     "@type": "Organization",
@@ -27,5 +31,14 @@
       "contactType": "Customer service"
     }
   }
+  </script>
+  <script>
+
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      $(".hero").css("background", 'url("https://image.ibb.co/iY9Muo/nungaray_opt.jpg")');
+      $(".hero").css("background-size", "cover");
+      $(".hero").css("background-position", "center");
+
+		}
   </script>
 </html>

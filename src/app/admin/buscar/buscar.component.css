@@ -47,7 +47,6 @@ label{
 	margin:0;
 }
 .w3l-overlay {
-    background: url(../../../assets/images/overlay.png)repeat;
     min-height:794px;
 }
 /*-- header --*/ 
@@ -228,16 +227,13 @@ nav.navbar.navbar-default.navbar-fixed-top.top-nav-collapse {
     text-decoration: none;
     height: 34px;
     width: 34px;
-    background: url(../../../assets/images/left.png) no-repeat 0px 0px;
 }
 .callbacks_nav.next {
     left: auto;
-    background: url(../../../assets/images/right.png) no-repeat 0px 0px;
     right: -62px;
 }
 .callbacks_nav.prev {
     left: auto;
-    background: url(../../../assets/images/left.png) no-repeat 0px 0px;
     left: -58px;
 }
 #slider3-pager a {
@@ -436,7 +432,6 @@ nav.navbar.navbar-default.navbar-fixed-top.top-nav-collapse {
 .agile-w3l3-grids {
     padding: 13em 1em 0;
     text-align: center;
-    background: url(../../../assets/images/grid1.jpg) no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -675,7 +670,6 @@ h3.title-w3l {
 /*-- //Middle_Section --*/
 /*-- team --*/   
 .team{
-	background: url(../../../assets/images/bg.jpg) no-repeat fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1147,7 +1141,6 @@ h3.title-w3l {
     height: 64px;
 	border: none;
 	text-indent: 100%;
-	background: url("../../../assets/images/up2.png") no-repeat 0px 0px;
 }
 #toTopHover {
     width: 64px;

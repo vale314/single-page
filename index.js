@@ -4,12 +4,23 @@ const router = new express.Router();
 const app = express();
 const MobileDetect = require('mobile-detect');
 const fs = require("fs")
-const http = require("https")
+const http = require("http")
+const  https = require('https');
 const url = require("url")
 const bodyParser = require('body-parser');
 const config = require('./config/index.json');
 const passport = require('passport');
 require('./server/models/index').connect(config.dbUri);
+
+const  forceSsl = require('express-force-ssl');
+app.use(forceSsl);
+
+
+ var options = {
+  key: fs.readFileSync('./server/www/keys/key.pem','utf8'),
+  ca: fs.readFileSync( './server/www/keys/ca.crt','utf8'),
+  cert: fs.readFileSync( './server/www/keys/crt.crt','utf8'),
+};
 
 const addPhotos = require('./server/registro/photos/index.js')
 const deletePhoto = require('./server/registro/photos/delete')
@@ -40,16 +51,14 @@ router.get('/admin',(req,res)=>{
 router.get('/mobile',(req,res)=>{
     md = new MobileDetect(req.headers['user-agent']);
     if( JSON.stringify(md.phone())  != 'null' || JSON.stringify(md.mobile()) !='null' ){
-        console.log("mobile")
         return res.json({mobile:true}).end();
     }
-    console.log("pc ")
     return res.json({mobile:false}).end();
 
 })
 
 router.get('/video',(req,res)=>{
-     console.log("Video")
+     console.log("E")
     const path = './server/assets/rafa.mp4'
 
       const file = fs.createReadStream(path)
@@ -60,6 +69,7 @@ router.get('/video',(req,res)=>{
   
       res.writeHead(200, head)
       fs.createReadStream(path).pipe(res)
+
 })
 
 
@@ -150,6 +160,9 @@ router.get('*',(req,res)=>{
 app.use(express.static('./dist'));
 app.use('/',router);
 
-app.listen(4200,'192.168.1.76' ,()=>{
+http.createServer(app).listen(80,'0.0.0.0')
+https.createServer(options, app).listen(443,'0.0.0.0');
+
+/*app.listen(80,'0.0.0.0' ,()=>{
     console.log("Server Is Running");
-})
+})*/
