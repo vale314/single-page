@@ -1,22 +1,17 @@
+<div
+  *ngIf="!mobile"
+  class="vid d-flex container-fluid justify-content-center align-items-center"
+>
+  <div class="imgd" [hidden]="myVar"></div>
+  <div class="loader" [hidden]="myVar"></div>
 
-
-    <div *ngIf="!mobile" class="vid d-flex  container-fluid justify-content-center align-items-center ">
-                
-            
-        <div class="imgd"  [hidden]="myVar">
-        </div>
-                <div class="loader" [hidden]="myVar">
-                </div>
-                    
-              
-        <video src="http://206.189.79.221/video" [muted]="muted" autoplay play inline loop class="d-none d-sm-none d-md-block  ">
-         
-        </video>
-    </div>
-
-    <div *ngIf="mobile" class="vid d-flex slider container-fluid justify-content-center align-items-center ">
-            <div class="imgd"  [hidden]="myVar">
-                </div>
-                        <div class="loader" [hidden]="myVar">
-                        </div>
-    </div>
+  <video
+    [src]="videos"
+    [muted]="muted"
+    autoplay
+    play
+    inline
+    loop
+    class="d-none d-sm-none d-md-block"
+  ></video>
+</div>
